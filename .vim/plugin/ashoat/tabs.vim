@@ -46,3 +46,5 @@ map <C-w>, gT
 map <C-w>. gt
 map <C-w>< :call MoveToPrevTab()<CR>
 map <C-w>> :call MoveToNextTab()<CR>
+map <C-w>; :tabm -1<CR>
+map <C-w>' :tabm +1<CR>
