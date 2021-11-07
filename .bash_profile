@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Silence annoying macOS warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # This is a better prompt
 PS1="\u@\h [\w]$ "
 
