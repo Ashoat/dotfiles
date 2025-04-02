@@ -33,6 +33,6 @@ let g:jsx_ext_required=0
 :set laststatus=2
 
 " Use relative paths for filenames in the statusline
-set statusline=%{expand('%:p:~:.')}\
-set statusline+=%h%w%m%r\
+set statusline=%{expand('%:p:~:.')}\ 
+set statusline+=%h%w%m%r\ 
 set statusline+=%=%(%l,%c%V\ %=\ %P%)
