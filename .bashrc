@@ -64,8 +64,12 @@ export PATH="$PATH":./node_modules/.bin
 # See here: https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview#auto-updater-permission-options
 export PATH=~/.npm-global/bin:$PATH
 
+# Cargo
+. "$HOME/.cargo/env"
+
+# Nix environment
+export PATH="$HOME"/.nix-profile/bin:/nix/var/nix/profiles/default/bin:"${PATH}"
+
 # sdkman (feels strongly that it should be at the bottom)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-. "$HOME/.cargo/env"
-export PATH="$HOME"/.nix-profile/bin:/nix/var/nix/profiles/default/bin:"${PATH}"
