@@ -2,6 +2,7 @@
 syntax on
 set showmatch
 set ruler
+set re=0
 
 " TABS
 set shiftwidth=2
@@ -25,5 +26,13 @@ set undofile
 set undodir=~/.vim/undodir
 
 " JS
-let g:javascript_plugin_flow = 1
-let g:jsx_ext_required = 0
+let g:javascript_plugin_flow=1
+let g:jsx_ext_required=0
+
+" Always show statusline
+:set laststatus=2
+
+" Use relative paths for filenames in the statusline
+set statusline=%{expand('%:p:~:.')}\
+set statusline+=%h%w%m%r\
+set statusline+=%=%(%l,%c%V\ %=\ %P%)
