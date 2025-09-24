@@ -1,4 +1,7 @@
 #!/bin/bash
 
-[[ -f ~/.profile ]] && . ~/.profile
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# Login shell environment
+[[ -f ~/.profile && -r ~/.profile ]] && . ~/.profile
+
+# Load interactive niceties only when interactive
+[[ $- == *i* && -r ~/.bashrc && -f ~/.bashrc ]] && . ~/.bashrc
