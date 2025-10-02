@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# .bashrc is loaded directly for interactive, non-login bash shells. In all
+# other cases it's loaded from ~/.bash_profile, which handles loading ~/.profile
+if [[ $- == *i* ]] && ! shopt -q login_shell; then
+  [[ -r ~/.profile && -f ~/.profile ]] && . ~/.profile
+fi
+
 # This is a better prompt
 PS1="\u@\h [\w]$ "
 
